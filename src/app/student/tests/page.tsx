@@ -56,23 +56,23 @@ export default function StudentTestsPage() {
                 <span className="badge-grade">{test.grade}</span>
                 {test.id === "demo-test-101" && (
                   <span style={{ fontSize: "11px", background: "var(--color-accent-muted)", color: "var(--color-accent)", padding: "2px 6px", borderRadius: "4px", fontWeight: "bold" }}>
-                    ⭐ Featured Demo
+                    Featured Assessment
                   </span>
                 )}
               </div>
               <h2 className="test-row-title">{test.title}</h2>
               <div className="test-row-meta">
                 <span className="test-row-meta-item">
-                  <span>⏱️</span> {test.durationMinutes} Minutes
+                  <span>Duration:</span> {test.durationMinutes} Mins
                 </span>
                 <span className="test-row-meta-item">
-                  <span>❓</span> {test.questionCount} Questions
+                  <span>Questions:</span> {test.questionCount}
                 </span>
                 <span className="test-row-meta-item">
-                  <span>🏆</span> {test.totalMarks} Marks Total
+                  <span>Marks:</span> {test.totalMarks} Total
                 </span>
                 <span className="test-row-meta-item">
-                  <span>🎯</span> Pass: {test.passingMarks} Marks
+                  <span>Pass:</span> {test.passingMarks} Marks
                 </span>
               </div>
             </div>

@@ -113,7 +113,11 @@ export default function ResourceListWithFilter({
         </div>
       ) : (
         <div className="no-resources-found">
-          <div className="empty-state-icon">📚</div>
+          <div className="empty-state-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z" />
+            </svg>
+          </div>
           <h3 className="empty-state-title">No resources match your selection</h3>
           <p className="empty-state-text">
             Try choosing a different subject filter or resetting your search query.

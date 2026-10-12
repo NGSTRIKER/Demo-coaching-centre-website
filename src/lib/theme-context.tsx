@@ -32,20 +32,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     setMounted(true);
     try {
-      // 1. Resolve Theme from Cookie first, then localStorage, then system preference
-      const cookieTheme = getCookie(COOKIE_KEYS.THEME) as Theme | null;
-      const savedTheme = cookieTheme || (localStorage.getItem("alive_theme") as Theme | null);
-
-      if (savedTheme === "light" || savedTheme === "dark") {
-        setThemeState(savedTheme);
-        document.documentElement.setAttribute("data-theme", savedTheme);
-      } else {
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const initialTheme: Theme = prefersDark ? "dark" : "light";
-        setThemeState(initialTheme);
-        document.documentElement.setAttribute("data-theme", initialTheme);
-        setCookie(COOKIE_KEYS.THEME, initialTheme, 365);
-      }
+      // 1. Theme is permanently light
+      setThemeState("light");
+      document.documentElement.setAttribute("data-theme", "light");
 
       // 2. Resolve Contrast from Cookie or system preference
       const cookieContrast = getCookie(COOKIE_KEYS.CONTRAST) as Contrast | null;
@@ -65,20 +54,17 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const setTheme = (newTheme: Theme) => {
-    setThemeState(newTheme);
+  const setTheme = (_newTheme: Theme) => {
+    setThemeState("light");
     try {
-      setCookie(COOKIE_KEYS.THEME, newTheme, 365);
-      localStorage.setItem("alive_theme", newTheme);
-      document.documentElement.setAttribute("data-theme", newTheme);
+      document.documentElement.setAttribute("data-theme", "light");
     } catch {
       // ignore
     }
   };
 
   const toggleTheme = () => {
-    const nextTheme = theme === "dark" ? "light" : "dark";
-    setTheme(nextTheme);
+    setTheme("light");
   };
 
   const setContrast = (newContrast: Contrast) => {

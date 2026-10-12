@@ -545,9 +545,7 @@ export default function AiCanvasPage() {
       {/* Top Banner Card */}
       <div className="canvas-header-card">
         <div className="canvas-title-group">
-          <h1>
-            <span>🎨</span> AI Smart Whiteboard Canvas
-          </h1>
+          <h1>AI Smart Whiteboard Canvas</h1>
           <p>
             Write, draw or upload mathematical equations, physics diagrams, and science problems.
             Powered by Google Gemini Multimodal Vision &amp; ALIVE Institute academic mentors.
@@ -556,10 +554,10 @@ export default function AiCanvasPage() {
 
         <div className="canvas-header-actions">
           <button className="canvas-btn-outline" onClick={handleOpenSavedNotes}>
-            <span>📚</span> My Saved Solutions
+            My Saved Solutions
           </button>
           <Link href="/student/dashboard" className="canvas-btn-outline">
-            <span>←</span> Back to Dashboard
+            Back to Dashboard
           </Link>
         </div>
       </div>
@@ -577,35 +575,35 @@ export default function AiCanvasPage() {
                 onClick={() => setTool("pen")}
                 title="Pen Tool"
               >
-                ✏️ Pen
+                Pen
               </button>
               <button
                 className={`tool-btn ${tool === "eraser" ? "active" : ""}`}
                 onClick={() => setTool("eraser")}
                 title="Eraser Tool"
               >
-                🧽 Eraser
+                Eraser
               </button>
               <button
                 className={`tool-btn ${tool === "line" ? "active" : ""}`}
                 onClick={() => setTool("line")}
                 title="Straight Line / Vector"
               >
-                📏 Line
+                Line
               </button>
               <button
                 className={`tool-btn ${tool === "rect" ? "active" : ""}`}
                 onClick={() => setTool("rect")}
                 title="Rectangle / Coordinate Box"
               >
-                📐 Box
+                Box
               </button>
               <button
                 className={`tool-btn ${tool === "circle" ? "active" : ""}`}
                 onClick={() => setTool("circle")}
                 title="Circle / Orbit"
               >
-                ⭕ Circle
+                Circle
               </button>
             </div>
 
@@ -679,14 +677,14 @@ export default function AiCanvasPage() {
                 ↪
               </button>
               <button className="tool-btn" onClick={handleClear} title="Clear Board">
-                🗑️ Clear
+                Clear
               </button>
               <button
                 className="tool-btn"
                 onClick={() => fileInputRef.current?.click()}
                 title="Upload Homework Photo"
               >
-                📷 Upload
+                Upload Photo
               </button>
               <input
                 ref={fileInputRef}
@@ -776,7 +774,7 @@ export default function AiCanvasPage() {
                   </>
                 ) : (
                   <>
-                    <span>✨</span> Solve with ALIVE AI
+                    Solve with ALIVE AI
                   </>
                 )}
               </button>
@@ -809,7 +807,7 @@ export default function AiCanvasPage() {
                   fontSize: "var(--text-xs)",
                 }}
               >
-                ⚠️ {solveError}
+                {solveError}
               </div>
             )}
           </div>
@@ -819,7 +817,7 @@ export default function AiCanvasPage() {
         <div className="solution-panel-card">
           <div className="solution-panel-header">
             <div className="solution-panel-title">
-              <span>🧠</span> ALIVE AI Academic Mentor
+              ALIVE AI Academic Mentor
             </div>
             {solution && (
               <span className="solution-panel-badge">{solution.subject}</span>
@@ -829,7 +827,6 @@ export default function AiCanvasPage() {
           <div className="solution-panel-content">
             {!solution && !isSolving && (
               <div className="solution-empty-state">
-                <div className="solution-empty-icon">📐</div>
                 <h3>Whiteboard Ready</h3>
                 <p>
                   Draw your math equation, ray diagram or physics problem on the board on the left,
@@ -906,7 +903,7 @@ export default function AiCanvasPage() {
                 {solution.boardExamTips && (
                   <div className="board-trap-card">
                     <div className="board-trap-title">
-                      <span>⚠️</span> Board Exam Trap &amp; Scoring Tip
+                      Board Exam Trap &amp; Scoring Tip
                     </div>
                     <p className="board-trap-text">{solution.boardExamTips}</p>
                   </div>
@@ -915,7 +912,7 @@ export default function AiCanvasPage() {
                 {/* Practice Challenge */}
                 {solution.practiceQuestion && (
                   <div className="practice-challenge-card">
-                    <div className="practice-title">💡 Try This Similar Practice Question</div>
+                    <div className="practice-title">Try This Similar Practice Question</div>
                     <div className="practice-question-text">{solution.practiceQuestion.question}</div>
                     {solution.practiceQuestion.hint && (
                       <div className="practice-hint-text">Hint: {solution.practiceQuestion.hint}</div>
@@ -934,7 +931,7 @@ export default function AiCanvasPage() {
                   onClick={handleSaveToNotes}
                   disabled={isSavingNote}
                 >
-                  {isSavingNote ? "Saving to DB..." : saveSuccess ? "✅ Saved in PostgreSQL!" : "💾 Save to My Notes"}
+                  {isSavingNote ? "Saving to DB..." : saveSuccess ? "Saved in PostgreSQL!" : "Save to My Notes"}
                 </button>
 
                 <button
@@ -946,7 +943,7 @@ export default function AiCanvasPage() {
                     alert("Solution copied to clipboard!");
                   }}
                 >
-                  📋 Copy Summary
+                  Copy Summary
                 </button>
               </div>
             )}
@@ -958,7 +955,7 @@ export default function AiCanvasPage() {
         <div className="notes-modal-overlay" onClick={() => setShowNotesDrawer(false)}>
           <div className="notes-modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="notes-modal-header">
-              <h2>📚 Saved Whiteboard Notes (Neon PostgreSQL)</h2>
+              <h2>Saved Whiteboard Notes (Neon PostgreSQL)</h2>
               <button
                 style={{
                   background: "none",
@@ -1012,10 +1009,10 @@ export default function AiCanvasPage() {
                       </button>
                       <button
                         className="tool-btn"
-                        style={{ color: "var(--color-error)" }}
+                        style={{ color: "var(--color-error)", fontSize: "var(--text-xs)" }}
                         onClick={(e) => handleDeleteSavedNote(note.id, e)}
                       >
-                        🗑️
+                        Delete
                       </button>
                     </div>
                   </div>

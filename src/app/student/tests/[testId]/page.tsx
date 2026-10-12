@@ -234,12 +234,14 @@ export default function TestEnginePage({
           {/* Top Sticky Bar */}
           <header className="test-top-bar">
             <div className="test-bar-title-wrap">
-              <span style={{ fontSize: "18px" }}>📝</span>
               <span className="test-bar-title">{currentTest.title}</span>
             </div>
 
             <div className={`test-timer-badge ${isDanger ? "danger" : isWarning ? "warning" : ""}`}>
-              <span>⏱️</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
               <span>{formatTimer(timeLeft)}</span>
             </div>
 
@@ -550,7 +552,7 @@ export default function TestEnginePage({
               }}
               className="btn-secondary"
             >
-              🔄 Re-take Test
+              Re-take Assessment
             </button>
             <Link href="/student/results" className="btn-primary" style={{ textDecoration: "none" }}>
               View Results Dashboard →
@@ -574,11 +576,11 @@ export default function TestEnginePage({
                       Q{idx + 1}. ({q.topic})
                     </span>
                     {isCorrect ? (
-                      <span className="review-badge correct">✓ Correct (+{q.marks} Marks)</span>
+                      <span className="review-badge correct">Correct (+{q.marks} Marks)</span>
                     ) : isAttempted ? (
-                      <span className="review-badge incorrect">✗ Incorrect (0 Marks)</span>
+                      <span className="review-badge incorrect">Incorrect (0 Marks)</span>
                     ) : (
-                      <span className="review-badge unanswered">⚪ Unattempted</span>
+                      <span className="review-badge unanswered">Unattempted</span>
                     )}
                   </div>
 
@@ -587,7 +589,7 @@ export default function TestEnginePage({
                     className="btn-secondary"
                     style={{ fontSize: "var(--text-xs)", padding: "4px 8px" }}
                   >
-                    {isSaved ? "★ Bookmarked" : "☆ Save Question"}
+                    {isSaved ? "Bookmarked" : "Save Question"}
                   </button>
                 </div>
 

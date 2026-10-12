@@ -193,16 +193,16 @@ export default function HomePage() {
           <div className="hero-inner">
             <div className="hero-tag">
               <span className="hero-tag-dot" aria-hidden="true" />
-              <span>⭐ Trusted Since 2012 • Admissions Open</span>
+              <span>Admissions Open 2026–27 • Established 2012</span>
             </div>
 
             <h1 className="hero-title">
-              Indore’s Most <em>Trusted</em> Coaching for Classes 6 to 12
+              Where Learning Comes <em className="hero-em">Alive</em>
             </h1>
 
             <p className="hero-lead">
-              Since 2012, ALIVE Institute has helped 2,000+ students succeed in ICSE, CBSE &amp; MP Board
-              examinations through expert faculty, 1:1 mentorship, and board + CUET-focused preparation.
+              Since 2012, ALIVE Institute has helped 2,000+ students succeed in CBSE, ICSE &amp; MP Board
+              examinations through expert faculty, 1:1 mentorship, and concept-first board + CUET preparation in Indore.
             </p>
 
             <div className="hero-actions">
@@ -223,7 +223,25 @@ export default function HomePage() {
               </a>
             </div>
 
-            {/* Stat bar below (Verifiable facts from institute) */}
+            {/* Large Crisp Classroom Showcase */}
+            <div className="hero-showcase" role="img" aria-label="Dr. Aditi Agrawal teaching biology and genetics with interactive smart board at ALIVE Institute Indore">
+              <div className="hero-image-frame">
+                <img
+                  src="/images/alive-classroom-hero.jpg"
+                  alt="Dr. Aditi Agrawal teaching concept-first biology & genetics on smart board to students at ALIVE Institute Indore"
+                  className="hero-classroom-image"
+                  width={1280}
+                  height={736}
+                  loading="eager"
+                />
+                <div className="hero-image-pill">
+                  <span className="hero-pill-pulse" aria-hidden="true" />
+                  <span>Interactive Smart Classroom • Concept-First Teaching</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Stat bar below */}
             <div className="hero-stat-bar" role="region" aria-label="Key Institute Facts">
               <div className="stat-item">
                 <span className="stat-label">Students Mentored</span>
@@ -300,19 +318,28 @@ export default function HomePage() {
                 &ldquo;Real academic confidence isn&rsquo;t memorizing formulas—it is understanding why those formulas exist and knowing how to apply them.&rdquo;
               </blockquote>
 
-              <div className="approach-classroom-card">
-                <img
-                  src="/images/alive-classroom-hero.jpg"
-                  alt="Dr. Aditi Agrawal teaching genetics with smart board at ALIVE Institute Indore"
-                  className="approach-classroom-img"
-                  width={640}
-                  height={427}
-                  loading="lazy"
-                />
-                <div className="approach-caption">
-                  <span className="caption-tag">Active Classroom</span>
-                  <span>Interactive smart board teaching &amp; small batch guidance at ALIVE Institute</span>
+              <div className="approach-focus-card">
+                <div className="focus-header">
+                  <span className="focus-pill">Academic Standard</span>
+                  <span className="focus-tag">Class 6 to 12</span>
                 </div>
+                <div className="focus-metrics">
+                  <div className="metric-cell">
+                    <strong>20–25</strong>
+                    <span>Max Batch Size</span>
+                  </div>
+                  <div className="metric-cell">
+                    <strong>Weekly</strong>
+                    <span>Diagnostic Tests</span>
+                  </div>
+                  <div className="metric-cell">
+                    <strong>1:1</strong>
+                    <span>Doubt Guidance</span>
+                  </div>
+                </div>
+                <p className="focus-note">
+                  Every batch follows board-calibrated rubrics designed specifically for CBSE, ICSE, and MP Board scoring patterns.
+                </p>
               </div>
             </div>
 

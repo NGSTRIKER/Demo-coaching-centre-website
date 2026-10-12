@@ -8,11 +8,11 @@ import ThemeToggle from "@/components/ui/ThemeToggle";
 import "@/styles/staff-layout.css";
 
 const staffNavItems = [
-  { href: "/staff/dashboard", label: "Dashboard", icon: "📊" },
-  { href: "/staff/courses", label: "Courses", icon: "📚" },
-  { href: "/staff/tests", label: "Assessments", icon: "✍️" },
-  { href: "/staff/students", label: "Students", icon: "👥" },
-  { href: "/staff/enquiries", label: "Enquiries", icon: "📬" },
+  { href: "/staff/dashboard", label: "Dashboard" },
+  { href: "/staff/courses", label: "Courses" },
+  { href: "/staff/tests", label: "Assessments" },
+  { href: "/staff/students", label: "Students" },
+  { href: "/staff/enquiries", label: "Enquiries" },
 ];
 
 function StaffLayoutContent({
@@ -36,7 +36,7 @@ function StaffLayoutContent({
         <div>
           <div className="staff-sidebar-header">
             <div className="staff-sidebar-logo">
-              <span>📐</span> ALIVE Faculty
+              ALIVE Faculty
             </div>
             <div className="staff-badge">Staff Console</div>
           </div>
@@ -50,7 +50,6 @@ function StaffLayoutContent({
                   href={item.href}
                   className={`staff-sidebar-link ${isActive ? "active" : ""}`}
                 >
-                  <span style={{ fontSize: "16px", width: "20px", textAlign: "center" }}>{item.icon}</span>
                   <span>{item.label}</span>
                 </Link>
               );
@@ -60,11 +59,9 @@ function StaffLayoutContent({
               Shortcuts
             </div>
             <Link href="/student/dashboard" className="staff-sidebar-link">
-              <span style={{ fontSize: "16px", width: "20px", textAlign: "center" }}>🎓</span>
               <span>Student View</span>
             </Link>
             <Link href="/admin/users" className="staff-sidebar-link">
-              <span style={{ fontSize: "16px", width: "20px", textAlign: "center" }}>🛡️</span>
               <span>Admin Console</span>
             </Link>
           </nav>
@@ -85,7 +82,7 @@ function StaffLayoutContent({
             </div>
           </div>
           <button className="staff-logout-btn" onClick={handleLogout}>
-            <span>🚪</span> Sign Out
+            <span>Sign Out</span>
           </button>
         </div>
       </aside>
@@ -118,7 +115,6 @@ function StaffLayoutContent({
               href={item.href}
               className={`staff-mobile-tab-item ${isActive ? "active" : ""}`}
             >
-              <span>{item.icon}</span>
               <span>{item.label}</span>
             </Link>
           );

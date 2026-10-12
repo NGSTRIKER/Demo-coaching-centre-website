@@ -253,7 +253,3 @@
   }
 }
 
-[data-theme="dark"] .site-footer {
-  background-color: #050912;
-  border-top: 2px solid var(--border-color);
-}

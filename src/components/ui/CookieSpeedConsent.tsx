@@ -37,7 +37,11 @@ export function CookieSpeedConsent() {
       <div className="cookie-speed-inner">
         <div className="cookie-speed-text">
           <div className="cookie-speed-title">
-            <span className="speed-icon" aria-hidden="true">⚡</span>
+            <span className="speed-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+            </span>
             <span>High-Speed Cookie Caching</span>
             <span className="cookie-speed-badge">Fast Mode</span>
           </div>

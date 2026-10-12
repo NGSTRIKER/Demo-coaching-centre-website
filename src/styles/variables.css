@@ -3,125 +3,64 @@
    Features consistent, readable typography and adaptive Light/Dark mode.
    ========================================================================== */
 
-/* ── Light Mode (High Contrast & Legible) ── */
-:root,
-[data-theme="light"] {
-  /* ── Background & Surface Semantics ── */
-  --bg-app: #ffffff;
-  --bg-surface: #f4f7fb;
-  --bg-surface-elevated: #ffffff;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f8fafc;
-  --bg-muted: #e2eaf2;
-  --border-color: #b5c4d4;           /* Crisp, high-definition borders */
-  --border-subtle: #cbd5e1;
+/* ── Capucine & Cappuccino Palette (Warm Linen, Espresso & Terracotta) ── */
+:root {
+  /* ── Background & Surface Semantics (Warm Linen & Milk Foam) ── */
+  --bg-app: #FAF7F2;                 /* Warm French linen canvas */
+  --bg-surface: #F4EFE6;             /* Soft cream / warm latte */
+  --bg-surface-elevated: #FFFFFF;    /* Pristine white */
+  --bg-card: #FFFFFF;                /* Pure white cards */
+  --bg-card-hover: #FAF6F0;
+  --bg-muted: #EFE7DC;               /* Oat / foam tint */
+  --border-color: #E2D7C8;           /* Warm architectural frame */
+  --border-subtle: #EFE8DD;
 
-  /* ── Text Semantics (WCAG AAA High Contrast) ── */
-  --text-primary: #050811;          /* 17.5:1 ratio on white */
-  --text-secondary: #1a2533;        /* 12.8:1 ratio on white */
-  --text-muted: #334155;            /* 7.5:1 ratio on white */
+  /* ── Text Semantics (Deep Espresso & Warm Mocha) ── */
+  --text-primary: #1C1917;          /* Deep dark roast espresso (18:1 contrast on linen) */
+  --text-secondary: #4A4239;        /* Warm mocha brown (9.2:1 contrast) */
+  --text-muted: #756A5E;            /* Warm toasted stone */
 
-  /* ── Brand Colors ── */
-  --color-primary: #0c233c;          /* High-contrast authoritative navy */
-  --color-primary-light: #163a63;    /* Hover */
-  --color-primary-dark: #051221;     /* Deep navy for emphasis */
-  --color-primary-muted: #e0eaf4;    /* Light navy tint */
+  /* ── Brand Colors (Capucine / Terracotta & Dark Roast) ── */
+  --color-primary: #231F1C;          /* Deep dark roast espresso */
+  --color-primary-light: #38322D;    /* Roasted coffee */
+  --color-primary-dark: #141210;     /* Pure dark roast */
+  --color-primary-muted: #F3ECE2;    /* Warm latte background tint */
 
-  --color-accent: #b33b14;           /* Rich terracotta — WCAG AAA contrast */
-  --color-accent-light: #cb461c;     /* Lighter accent */
-  --color-accent-dark: #8c2a0b;      /* Darker accent */
-  --color-accent-muted: #fceee8;     /* Light terracotta tint */
+  --color-accent: #C85A32;           /* Capucine — rich warm nasturtium / French terracotta */
+  --color-accent-light: #D96B43;     /* Warm apricot-coral hover */
+  --color-accent-dark: #A64420;      /* Deep brick terracotta */
+  --color-accent-muted: #FDF2EC;     /* Soft Capucine petal wash */
 
-  --color-success: #0f683d;
-  --color-success-light: #e0f4eb;
-  --color-warning: #996300;
-  --color-warning-light: #fef5de;
-  --color-error: #b52b1d;
-  --color-error-light: #fde8e5;
-  --color-info: #164e87;
-  --color-info-light: #e0ecf8;
+  --color-success: #1E6B45;          /* Sage forest */
+  --color-success-light: #E8F4EE;
+  --color-warning: #9E6310;          /* Warm golden amber */
+  --color-warning-light: #FDF6E8;
+  --color-error: #B83424;            /* Carmine terracotta */
+  --color-error-light: #FDEEEB;
+  --color-info: #2B577E;             /* Dusty slate navy */
+  --color-info-light: #EBF2F8;
 
-  /* ── Neutral Scales (High Contrast Recalibrated) ── */
-  --color-white: #ffffff;
-  --color-white-pure: #ffffff;
-  --color-gray-50: #f4f7fb;
-  --color-gray-100: #e7edf5;
-  --color-gray-200: #d0dbe6;         /* Clear dividing lines */
-  --color-gray-300: #b5c4d4;         /* High-contrast element borders */
-  --color-gray-400: #7a8c9e;
-  --color-gray-500: #424f5d;         /* High-contrast labels (no more washed out gray!) */
-  --color-gray-600: #293440;         /* High-contrast secondary text */
-  --color-gray-700: #172029;         /* High-contrast paragraphs */
-  --color-gray-800: #0d1217;
-  --color-gray-900: #050811;
-  --color-black: #000000;
+  /* ── Neutral Scales (Capucine Warm Grays) ── */
+  --color-white: #FFFFFF;
+  --color-white-pure: #FFFFFF;
+  --color-gray-50: #FAF7F2;
+  --color-gray-100: #F4EFE6;
+  --color-gray-200: #EAE2D5;
+  --color-gray-300: #E2D7C8;
+  --color-gray-400: #B8AC9C;
+  --color-gray-500: #8C7F70;
+  --color-gray-600: #5C5245;
+  --color-gray-700: #3D352D;
+  --color-gray-800: #26211C;
+  --color-gray-900: #1C1917;
+  --color-black: #141210;
 
-  /* ── Shadows (Clear depth) ── */
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.08);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.10), 0 2px 4px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.12), 0 4px 6px rgba(0, 0, 0, 0.08);
-  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.14), 0 8px 10px rgba(0, 0, 0, 0.06);
-}
-
-/* ── Dark Mode (High Contrast & Deep Luminance) ── */
-[data-theme="dark"] {
-  /* ── Background & Surface Semantics ── */
-  --bg-app: #070b12;                 /* Deep OLED black */
-  --bg-surface: #0d1522;
-  --bg-surface-elevated: #131f32;
-  --bg-card: #131f32;
-  --bg-card-hover: #1b2a42;
-  --bg-muted: rgba(88, 166, 255, 0.18);
-  --border-color: #42587c;           /* Bright, prominent card boundaries */
-  --border-subtle: #2d3e58;
-
-  /* ── Text Semantics ── */
-  --text-primary: #ffffff;          /* Absolute brilliant white */
-  --text-secondary: #f1f5f9;        /* Maximum readability */
-  --text-muted: #cbd5e1;            /* High-contrast slate */
-
-  /* ── Brand Colors (Adjusted for Dark Mode High Contrast) ── */
-  --color-primary: #58a6ff;          /* Vivid electric sky blue, 8.5:1 on dark */
-  --color-primary-light: #79b8ff;
-  --color-primary-dark: #388bfd;
-  --color-primary-muted: rgba(88, 166, 255, 0.22);
-
-  --color-accent: #ff7a45;           /* Punchy vibrant terracotta */
-  --color-accent-light: #ff9466;
-  --color-accent-dark: #f05a22;
-  --color-accent-muted: rgba(255, 122, 69, 0.22);
-
-  --color-success: #3fb950;
-  --color-success-light: rgba(63, 185, 80, 0.20);
-  --color-warning: #d29922;
-  --color-warning-light: rgba(210, 153, 34, 0.20);
-  --color-error: #f85149;
-  --color-error-light: rgba(248, 81, 73, 0.20);
-  --color-info: #58a6ff;
-  --color-info-light: rgba(88, 166, 255, 0.20);
-
-  /* ── Neutral Scales (Dark Inversion) ── */
-  --color-white: #131f32;
-  --color-white-pure: #ffffff;
-  --color-gray-50: #0d1522;
-  --color-gray-100: #131f32;
-  --color-gray-200: #2d3e58;
-  --color-gray-300: #42587c;         /* Crisp card borders */
-  --color-gray-400: #94a3b8;
-  --color-gray-500: #cbd5e1;         /* Readable captions */
-  --color-gray-600: #e2e8f0;
-  --color-gray-700: #f1f5f9;
-  --color-gray-800: #f8fafc;
-  --color-gray-900: #ffffff;
-  --color-black: #ffffff;
-
-  /* ── Shadows ── */
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.45);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.55);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.55);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.65);
-  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.75);
+  /* ── Shadows (Warm, soft ambient diffuse) ── */
+  --shadow-xs: 0 1px 2px rgba(35, 31, 28, 0.05);
+  --shadow-sm: 0 2px 4px rgba(35, 31, 28, 0.06), 0 1px 2px rgba(35, 31, 28, 0.04);
+  --shadow-md: 0 6px 12px rgba(35, 31, 28, 0.07), 0 2px 4px rgba(35, 31, 28, 0.04);
+  --shadow-lg: 0 14px 28px rgba(35, 31, 28, 0.09), 0 4px 8px rgba(35, 31, 28, 0.04);
+  --shadow-xl: 0 24px 44px rgba(35, 31, 28, 0.12), 0 8px 16px rgba(35, 31, 28, 0.06);
 }
 
 /* ── Dedicated Ultra-High Contrast Mode ── */
@@ -136,22 +75,6 @@
   --color-gray-700: #000000;
   --border-thin: 2px solid #000000;
   --border-medium: 3px solid #000000;
-}
-
-[data-theme="dark"][data-contrast="high"] {
-  --bg-app: #000000;
-  --bg-surface: #0a0a0a;
-  --bg-card: #0e0e0e;
-  --border-color: #ffffff;
-  --border-subtle: #cccccc;
-  --text-primary: #ffffff;
-  --text-secondary: #ffffff;
-  --text-muted: #eeeeee;
-  --color-gray-500: #ffffff;
-  --color-gray-600: #ffffff;
-  --color-gray-700: #ffffff;
-  --border-thin: 2px solid #ffffff;
-  --border-medium: 3px solid #ffffff;
 }
 
 @media (prefers-contrast: more) {

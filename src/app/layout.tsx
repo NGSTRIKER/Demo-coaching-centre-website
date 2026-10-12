@@ -109,7 +109,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var tm=document.cookie.match(/(?:^|; )alive_theme=([^;]*)/);var t=tm?decodeURIComponent(tm[1]):(localStorage.getItem('alive_theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));document.documentElement.setAttribute('data-theme',t);var cm=document.cookie.match(/(?:^|; )alive_contrast=([^;]*)/);var c=cm?decodeURIComponent(cm[1]):(localStorage.getItem('alive_contrast')||(window.matchMedia('(prefers-contrast:more)').matches?'high':'standard'));document.documentElement.setAttribute('data-contrast',c);}catch(e){}})();`,
+            __html: `(function(){try{document.documentElement.setAttribute('data-theme','light');var cm=document.cookie.match(/(?:^|; )alive_contrast=([^;]*)/);var c=cm?decodeURIComponent(cm[1]):(localStorage.getItem('alive_contrast')||(window.matchMedia('(prefers-contrast:more)').matches?'high':'standard'));document.documentElement.setAttribute('data-contrast',c);}catch(e){}})();`,
           }}
         />
         <script

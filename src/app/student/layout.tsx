@@ -8,11 +8,11 @@ import ThemeToggle from "@/components/ui/ThemeToggle";
 import "@/styles/student-layout.css";
 
 const navItems = [
-  { href: "/student/dashboard", label: "Dashboard", icon: "📊" },
-  { href: "/student/canvas", label: "AI Canvas Board", icon: "🎨" },
-  { href: "/student/tests", label: "Assessments", icon: "📝" },
-  { href: "/student/results", label: "Results & Analysis", icon: "🏆" },
-  { href: "/student/questions", label: "Saved Questions", icon: "🔖" },
+  { href: "/student/dashboard", label: "Dashboard" },
+  { href: "/student/canvas", label: "AI Canvas Board" },
+  { href: "/student/tests", label: "Assessments" },
+  { href: "/student/results", label: "Results & Analysis" },
+  { href: "/student/questions", label: "Saved Questions" },
 ];
 
 function StudentLayoutContent({
@@ -36,7 +36,7 @@ function StudentLayoutContent({
         <div>
           <div className="sidebar-header">
             <div className="sidebar-logo">
-              <span>📐</span> ALIVE Institute
+              ALIVE Institute
             </div>
             <div className="sidebar-badge">Student Portal</div>
           </div>
@@ -50,7 +50,6 @@ function StudentLayoutContent({
                   href={item.href}
                   className={`sidebar-link ${isActive ? "active" : ""}`}
                 >
-                  <span className="sidebar-icon">{item.icon}</span>
                   <span>{item.label}</span>
                 </Link>
               );
@@ -60,11 +59,9 @@ function StudentLayoutContent({
               Shortcuts
             </div>
             <Link href="/staff/dashboard" className="sidebar-link">
-              <span className="sidebar-icon">👨‍🏫</span>
               <span>Switch to Staff</span>
             </Link>
             <Link href="/admin/users" className="sidebar-link">
-              <span className="sidebar-icon">🛡️</span>
               <span>Switch to Admin</span>
             </Link>
           </nav>
@@ -81,7 +78,7 @@ function StudentLayoutContent({
             </div>
           </div>
           <button className="sidebar-logout-btn" onClick={handleLogout}>
-            <span>🚪</span> Sign Out
+            <span>Sign Out</span>
           </button>
         </div>
       </aside>
@@ -123,8 +120,7 @@ function StudentLayoutContent({
               href={item.href}
               className={`mobile-tab-item ${isActive ? "active" : ""}`}
             >
-              <span>{item.icon}</span>
-              <span>{item.label.split(" ")[0]}</span>
+              <span>{item.label}</span>
             </Link>
           );
         })}

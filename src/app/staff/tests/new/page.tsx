@@ -410,7 +410,7 @@ export default function NewTestPage() {
                 cursor: "pointer",
               }}
             >
-              🚀 Publish Assessment Now
+              Publish Assessment Now
             </button>
           </div>
         </div>

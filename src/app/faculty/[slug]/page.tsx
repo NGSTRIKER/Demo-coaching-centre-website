@@ -74,7 +74,13 @@ export default async function FacultyDetailPage({ params }: FacultyDetailPagePro
 
           {/* Demo Disclaimer */}
           <div className="faculty-detail-disclaimer" role="alert">
-            <span aria-hidden="true">⚠️</span>
+            <span aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                <line x1="12" y1="9" x2="12" y2="13" />
+                <line x1="12" y1="17" x2="12.01" y2="17" />
+              </svg>
+            </span>
             <span>
               <strong>Demonstration Profile:</strong> This educator profile is an illustrative
               mock representation for system preview purposes. Real faculty credentials and
@@ -126,11 +132,20 @@ export default async function FacultyDetailPage({ params }: FacultyDetailPagePro
             <section className="faculty-section-block">
               <h2 className="faculty-section-title">Teaching Focus &amp; Domain</h2>
               <div className="qualification-item" style={{ marginBottom: 'var(--space-3)' }}>
-                <span className="qualification-icon" aria-hidden="true">🎯</span>
+                <span className="qualification-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <circle cx="12" cy="12" r="4" />
+                  </svg>
+                </span>
                 <span><strong>Primary Specialization:</strong> {faculty.subject}</span>
               </div>
               <div className="qualification-item">
-                <span className="qualification-icon" aria-hidden="true">🏫</span>
+                <span className="qualification-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M3 21h18M3 7v14M21 7v14M6 7V3h12v4M10 11v6M14 11v6" />
+                  </svg>
+                </span>
                 <span><strong>Department:</strong> {faculty.department}</span>
               </div>
             </section>
@@ -141,7 +156,12 @@ export default async function FacultyDetailPage({ params }: FacultyDetailPagePro
               <ul className="qualifications-list">
                 {qualificationsList.map((qual, index) => (
                   <li key={index} className="qualification-item">
-                    <span className="qualification-icon" aria-hidden="true">🎓</span>
+                    <span className="qualification-icon" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                      </svg>
+                    </span>
                     <span>
                       {qual}{' '}
                       <em style={{ fontSize: '0.8rem', color: 'var(--color-gray-500)' }}>

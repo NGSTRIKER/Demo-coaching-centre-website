@@ -108,21 +108,21 @@ export default function LoginPage() {
               className={`role-tab-btn ${role === "student" ? "active" : ""}`}
               onClick={() => handleRoleChange("student")}
             >
-              🎓 Student
+              Student
             </button>
             <button
               type="button"
               className={`role-tab-btn ${role === "staff" ? "active" : ""}`}
               onClick={() => handleRoleChange("staff")}
             >
-              👨‍🏫 Staff
+              Staff &amp; Faculty
             </button>
             <button
               type="button"
               className={`role-tab-btn ${role === "admin" ? "active" : ""}`}
               onClick={() => handleRoleChange("admin")}
             >
-              🛡️ Admin
+              Admin
             </button>
           </div>
 

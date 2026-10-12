@@ -43,7 +43,14 @@ export default function StudentDashboardPage() {
       {/* Quick Stats Row */}
       <section className="stats-grid">
         <div className="stat-card">
-          <div className="stat-icon-wrapper stat-icon-blue">📝</div>
+          <div className="stat-icon-wrapper stat-icon-blue" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+            </svg>
+          </div>
           <div className="stat-data">
             <span className="stat-value">{availableTests.length}</span>
             <span className="stat-label">Available Tests</span>
@@ -51,7 +58,11 @@ export default function StudentDashboardPage() {
         </div>
 
         <div className="stat-card">
-          <div className="stat-icon-wrapper stat-icon-orange">🎯</div>
+          <div className="stat-icon-wrapper stat-icon-orange" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
           <div className="stat-data">
             <span className="stat-value">1</span>
             <span className="stat-label">Completed Tests</span>
@@ -59,7 +70,12 @@ export default function StudentDashboardPage() {
         </div>
 
         <div className="stat-card">
-          <div className="stat-icon-wrapper stat-icon-green">📈</div>
+          <div className="stat-icon-wrapper stat-icon-green" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+              <polyline points="17 6 23 6 23 12" />
+            </svg>
+          </div>
           <div className="stat-data">
             <span className="stat-value">85%</span>
             <span className="stat-label">Average Score</span>
@@ -67,7 +83,11 @@ export default function StudentDashboardPage() {
         </div>
 
         <div className="stat-card">
-          <div className="stat-icon-wrapper stat-icon-purple">🔖</div>
+          <div className="stat-icon-wrapper stat-icon-purple" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+            </svg>
+          </div>
           <div className="stat-data">
             <span className="stat-value">4</span>
             <span className="stat-label">Saved Questions</span>
@@ -82,19 +102,15 @@ export default function StudentDashboardPage() {
         </div>
         <div className="actions-grid">
           <Link href="/student/canvas" className="action-tile" style={{ border: "2px solid var(--color-primary-light)", background: "var(--color-primary-muted)" }}>
-            <span className="action-icon">🎨</span>
             <span className="action-label" style={{ fontWeight: 700, color: "var(--color-primary-dark)" }}>AI Smart Canvas Board</span>
           </Link>
           <Link href="/student/tests" className="action-tile">
-            <span className="action-icon">✍️</span>
             <span className="action-label">Take an Assessment</span>
           </Link>
           <Link href="/student/results" className="action-tile">
-            <span className="action-icon">📊</span>
             <span className="action-label">View Recent Scorecards</span>
           </Link>
           <Link href="/student/questions" className="action-tile">
-            <span className="action-icon">💡</span>
             <span className="action-label">Review Bookmarks</span>
           </Link>
         </div>
@@ -120,13 +136,13 @@ export default function StudentDashboardPage() {
                 <h3>{test.title}</h3>
                 <div className="test-card-meta">
                   <span className="test-meta-item">
-                    <span>⏱️</span> {test.durationMinutes} Mins
+                    <span>Duration:</span> {test.durationMinutes} Mins
                   </span>
                   <span className="test-meta-item">
-                    <span>❓</span> {test.questionCount} Questions
+                    <span>Questions:</span> {test.questionCount}
                   </span>
                   <span className="test-meta-item">
-                    <span>🏆</span> {test.totalMarks} Marks
+                    <span>Marks:</span> {test.totalMarks} Total
                   </span>
                 </div>
               </div>

@@ -72,7 +72,11 @@ export default function SavedQuestionsPage() {
         </div>
       ) : (
         <div className="empty-questions-card">
-          <div className="icon">🔖</div>
+          <div className="icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+            </svg>
+          </div>
           <h3>No Bookmarked Questions Yet</h3>
           <p>
             When taking tests or viewing results, click the "Save Question" button to build your personal revision bank.

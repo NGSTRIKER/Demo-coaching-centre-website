@@ -72,7 +72,7 @@ export default function StaffDashboardPage() {
 
           <div className="activity-feed">
             <div className="activity-item">
-              <div className="activity-icon-bubble">📝</div>
+              <div className="activity-icon-bubble" aria-hidden="true">•</div>
               <div className="activity-content">
                 <div>
                   <strong>Aarav Sharma</strong> submitted <em>Class 10 Mathematics Demo Assessment</em>
@@ -82,7 +82,7 @@ export default function StaffDashboardPage() {
             </div>
 
             <div className="activity-item">
-              <div className="activity-icon-bubble">📬</div>
+              <div className="activity-icon-bubble" aria-hidden="true">•</div>
               <div className="activity-content">
                 <div>
                   New enquiry from <strong>Meera Krishnan (Parent)</strong> for Class 10 Booster
@@ -92,17 +92,17 @@ export default function StaffDashboardPage() {
             </div>
 
             <div className="activity-item">
-              <div className="activity-icon-bubble">🎯</div>
+              <div className="activity-icon-bubble" aria-hidden="true">•</div>
               <div className="activity-content">
                 <div>
-                  <strong>Diya Narang</strong> completed <em>Polynomials & Quadratic Equations Test</em>
+                  <strong>Diya Narang</strong> completed <em>Polynomials &amp; Quadratic Equations Test</em>
                 </div>
                 <div className="activity-time">5 hours ago • Score: 36/40 (90%)</div>
               </div>
             </div>
 
             <div className="activity-item">
-              <div className="activity-icon-bubble">📚</div>
+              <div className="activity-icon-bubble" aria-hidden="true">•</div>
               <div className="activity-content">
                 <div>
                   Faculty curriculum updated for <strong>Class 11 Calculus Intensive</strong>
@@ -121,23 +121,23 @@ export default function StaffDashboardPage() {
 
           <div className="staff-quick-actions-list">
             <Link href="/staff/tests/new" className="staff-action-link-btn">
-              <span>✍️ Author New Assessment</span>
+              <span>Author New Assessment</span>
               <span>→</span>
             </Link>
             <Link href="/staff/courses" className="staff-action-link-btn">
-              <span>📚 Manage Course Batches</span>
+              <span>Manage Course Batches</span>
               <span>→</span>
             </Link>
             <Link href="/staff/students" className="staff-action-link-btn">
-              <span>👥 Student Performance Ledger</span>
+              <span>Student Performance Ledger</span>
               <span>→</span>
             </Link>
             <Link href="/staff/enquiries" className="staff-action-link-btn">
-              <span>📬 Admission Enquiries</span>
+              <span>Admission Enquiries</span>
               <span>→</span>
             </Link>
             <Link href="/staff/tests" className="staff-action-link-btn">
-              <span>📊 View All Test Submissions</span>
+              <span>View All Test Submissions</span>
               <span>→</span>
             </Link>
           </div>

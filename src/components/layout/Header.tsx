@@ -290,10 +290,6 @@ export const Header: React.FC = () => {
           </nav>
 
           <div className="mobile-nav-footer">
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingBottom: "12px", borderBottom: "1px solid var(--border-color)", marginBottom: "12px" }}>
-              <span style={{ fontSize: "var(--text-sm)", fontWeight: 600 }}>Theme</span>
-              <ThemeToggle variant="pill" />
-            </div>
             <Link
               href="/login"
               className="btn btn-outline"
