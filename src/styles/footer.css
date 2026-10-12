@@ -1,0 +1,251 @@
+/* ==========================================================================
+   ALIVE Institute — Footer Styles
+   ========================================================================== */
+
+.site-footer {
+  background-color: var(--color-primary-dark);
+  color: var(--color-gray-300);
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-8);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr 1fr 1.3fr;
+  gap: var(--space-10);
+  margin-bottom: var(--space-16);
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-heading {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--color-white);
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: var(--space-5);
+  position: relative;
+  padding-bottom: var(--space-2);
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 32px;
+  height: 2px;
+  background-color: var(--color-accent);
+  border-radius: var(--radius-full);
+}
+
+/* About Column */
+.footer-about-logo {
+  margin-bottom: var(--space-4);
+  display: inline-block;
+}
+
+.footer-about-desc {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-gray-400);
+  margin-bottom: var(--space-6);
+}
+
+.footer-social-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all var(--transition-fast);
+}
+
+.footer-social-link:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* Links lists */
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer-link-item {
+  display: flex;
+}
+
+.footer-nav-link {
+  font-size: var(--text-sm);
+  color: var(--color-gray-400);
+  text-decoration: none;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.footer-nav-link:hover {
+  color: var(--color-white);
+  transform: translateX(4px);
+}
+
+/* Contact Column with Branches */
+.footer-branches-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.footer-branch-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.footer-branch-title {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.footer-branch-address {
+  font-size: var(--text-xs);
+  line-height: var(--leading-relaxed);
+  color: var(--color-gray-400);
+}
+
+.footer-branch-phone {
+  font-size: var(--text-xs);
+  color: var(--color-accent-light);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-weight: var(--font-medium);
+  margin-top: 2px;
+}
+
+.footer-branch-phone:hover {
+  text-decoration: underline;
+  color: var(--color-white);
+}
+
+.footer-direct-contact {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+}
+
+.footer-direct-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-gray-400);
+  text-decoration: none;
+}
+
+.footer-direct-item:hover {
+  color: var(--color-white);
+}
+
+/* Bottom Bar */
+.footer-bottom-bar {
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.footer-bottom-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+}
+
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-legal-link {
+  color: var(--color-gray-500);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-legal-link:hover {
+  color: var(--color-gray-300);
+}
+
+.footer-concept-disclaimer {
+  font-size: 11px;
+  line-height: var(--leading-normal);
+  color: var(--color-gray-500);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-accent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .footer-main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .site-footer {
+    padding-top: var(--space-10);
+  }
+
+  .footer-bottom-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

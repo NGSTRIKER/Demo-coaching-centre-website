@@ -1,0 +1,95 @@
+/* ==========================================================================
+   ALIVE Institute — Staff Tests Styles
+   ========================================================================== */
+
+.staff-tests-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  font-family: var(--font-sans);
+}
+
+.staff-tests-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.staff-tests-header h1 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-gray-900);
+}
+
+.staff-tests-header p {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+}
+
+.tests-table-box {
+  background-color: var(--color-white);
+  border: var(--border-thin);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+}
+
+.tests-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--text-sm);
+}
+
+.tests-table th {
+  background-color: var(--color-gray-50);
+  padding: var(--space-4) var(--space-5);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-700);
+  border-bottom: var(--border-thin);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tests-table td {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: var(--border-thin);
+  color: var(--color-gray-800);
+  vertical-align: middle;
+}
+
+.tests-table tr:hover td {
+  background-color: var(--color-gray-50);
+}
+
+.status-published {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .tests-table thead {
+    display: none;
+  }
+  .tests-table, .tests-table tbody, .tests-table tr, .tests-table td {
+    display: block;
+    width: 100%;
+  }
+  .tests-table tr {
+    border-bottom: 2px solid var(--color-gray-200);
+    padding: var(--space-4);
+  }
+  .tests-table td {
+    padding: var(--space-2) 0;
+    border-bottom: none;
+  }
+}

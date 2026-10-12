@@ -1,0 +1,126 @@
+/* ==========================================================================
+   ALIVE Institute — Staff Courses Styles
+   ========================================================================== */
+
+.staff-courses-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  font-family: var(--font-sans);
+}
+
+.staff-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.staff-page-header h1 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-gray-900);
+}
+
+.staff-page-header p {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+}
+
+.table-wrapper {
+  background-color: var(--color-white);
+  border: var(--border-thin);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+}
+
+.management-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--text-sm);
+}
+
+.management-table th {
+  background-color: var(--color-gray-50);
+  padding: var(--space-4) var(--space-5);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-700);
+  border-bottom: var(--border-thin);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.management-table td {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: var(--border-thin);
+  color: var(--color-gray-800);
+  vertical-align: middle;
+}
+
+.management-table tr:hover td {
+  background-color: var(--color-gray-50);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: var(--font-bold);
+}
+
+.status-badge.active {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.status-badge.upcoming {
+  background-color: var(--color-primary-muted);
+  color: var(--color-primary);
+}
+
+.status-badge.warning {
+  background-color: var(--color-warning-light);
+  color: #92400e;
+}
+
+.table-btn {
+  background: none;
+  border: 1px solid var(--color-gray-300);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  color: var(--color-gray-700);
+  transition: all var(--transition-fast);
+}
+
+.table-btn:hover {
+  background-color: var(--color-gray-100);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+@media (max-width: 800px) {
+  .management-table thead {
+    display: none;
+  }
+  .management-table, .management-table tbody, .management-table tr, .management-table td {
+    display: block;
+    width: 100%;
+  }
+  .management-table tr {
+    border-bottom: 2px solid var(--color-gray-200);
+    padding: var(--space-4);
+  }
+  .management-table td {
+    padding: var(--space-2) 0;
+    border-bottom: none;
+  }
+}

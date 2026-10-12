@@ -1,0 +1,146 @@
+/* ==========================================================================
+   ALIVE Institute — Student Results Page Styles
+   ========================================================================== */
+
+.student-results-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.results-header h1 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-gray-900);
+}
+
+.results-header p {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+}
+
+.results-table-container {
+  background-color: var(--color-white);
+  border: var(--border-thin);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--text-sm);
+}
+
+.results-table th {
+  background-color: var(--color-gray-50);
+  padding: var(--space-4) var(--space-5);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-700);
+  border-bottom: var(--border-thin);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.results-table td {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: var(--border-thin);
+  color: var(--color-gray-800);
+  vertical-align: middle;
+}
+
+.results-table tr:last-child td {
+  border-bottom: none;
+}
+
+.results-table tr:hover td {
+  background-color: var(--color-gray-50);
+}
+
+.score-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-weight: var(--font-bold);
+  font-size: var(--text-xs);
+}
+
+.score-badge-pill.passed {
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.score-badge-pill.failed {
+  background-color: var(--color-error-light);
+  color: var(--color-error);
+}
+
+.btn-review-link {
+  color: var(--color-primary);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+  text-decoration: none;
+}
+
+.btn-review-link:hover {
+  text-decoration: underline;
+  color: var(--color-primary-light);
+}
+
+/* Empty State Card */
+.empty-results-box {
+  background-color: var(--color-white);
+  border: var(--border-thin);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12) var(--space-6);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-results-box .icon {
+  font-size: 48px;
+  margin-bottom: var(--space-4);
+}
+
+.empty-results-box h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.empty-results-box p {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  max-width: 440px;
+  margin-bottom: var(--space-6);
+}
+
+@media (max-width: 768px) {
+  .results-table thead {
+    display: none;
+  }
+
+  .results-table, .results-table tbody, .results-table tr, .results-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .results-table tr {
+    border-bottom: 2px solid var(--color-gray-200);
+    padding: var(--space-4);
+  }
+
+  .results-table td {
+    padding: var(--space-2) 0;
+    border-bottom: none;
+  }
+}

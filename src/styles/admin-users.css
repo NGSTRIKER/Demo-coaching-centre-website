@@ -1,0 +1,110 @@
+/* ==========================================================================
+   ALIVE Institute — Admin Users Styles
+   ========================================================================== */
+
+.admin-users-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  font-family: var(--font-sans);
+}
+
+.admin-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--border-thin);
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.admin-top-bar h1 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-gray-900);
+}
+
+.admin-top-bar p {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+}
+
+.admin-table-card {
+  background-color: var(--color-white);
+  border: var(--border-thin);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--text-sm);
+}
+
+.admin-table th {
+  background-color: var(--color-gray-50);
+  padding: var(--space-4) var(--space-5);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-700);
+  border-bottom: var(--border-thin);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-table td {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: var(--border-thin);
+  color: var(--color-gray-800);
+  vertical-align: middle;
+}
+
+.admin-table tr:hover td {
+  background-color: var(--color-gray-50);
+}
+
+.role-pill {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.role-pill.Student {
+  background-color: var(--color-primary-muted);
+  color: var(--color-primary);
+}
+
+.role-pill.Staff {
+  background-color: var(--color-accent-muted);
+  color: var(--color-accent);
+}
+
+.role-pill.Administrator {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
+
+@media (max-width: 800px) {
+  .admin-table thead {
+    display: none;
+  }
+  .admin-table, .admin-table tbody, .admin-table tr, .admin-table td {
+    display: block;
+    width: 100%;
+  }
+  .admin-table tr {
+    border-bottom: 2px solid var(--color-gray-200);
+    padding: var(--space-4);
+  }
+  .admin-table td {
+    padding: var(--space-2) 0;
+    border-bottom: none;
+  }
+}

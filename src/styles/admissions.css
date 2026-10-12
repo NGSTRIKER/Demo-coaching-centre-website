@@ -1,0 +1,237 @@
+/* ==========================================================================
+   ALIVE Institute — Admissions Page Styles
+   Editorial walkthrough, process steps, checklist, courses summary
+   ========================================================================== */
+
+.admissions-page {
+  padding-bottom: var(--space-20);
+}
+
+/* ── Admissions Hero ── */
+.admissions-hero {
+  background: linear-gradient(180deg, var(--color-primary-muted) 0%, rgba(248, 249, 250, 0.4) 100%);
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-16);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.admissions-hero-content {
+  max-width: 840px;
+  margin-top: var(--space-4);
+}
+
+.admissions-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 4vw + 1rem, 3.5rem);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-4);
+}
+
+.admissions-hero-lead {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-gray-700);
+  margin-bottom: var(--space-6);
+}
+
+.admissions-hero-actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* ── Process Steps ── */
+.admissions-steps-section {
+  padding-block: var(--space-16);
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+  position: relative;
+}
+
+.step-card {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: var(--space-6);
+  padding: var(--space-8);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  position: relative;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.step-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.step-badge {
+  width: 64px;
+  height: 64px;
+  background-color: var(--color-primary-muted);
+  color: var(--color-primary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+}
+
+.step-body h3 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-2);
+}
+
+.step-body p {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-gray-700);
+}
+
+.step-body ul {
+  margin-top: var(--space-3);
+  list-style: disc;
+  padding-left: var(--space-5);
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+}
+
+@media (max-width: 640px) {
+  .step-card {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    padding: var(--space-6);
+  }
+
+  .step-badge {
+    width: 48px;
+    height: 48px;
+    font-size: var(--text-xl);
+  }
+}
+
+/* ── What to Expect ── */
+.expect-section {
+  background-color: var(--color-gray-50);
+  border-top: 1px solid var(--color-gray-200);
+  border-bottom: 1px solid var(--color-gray-200);
+  padding-block: var(--space-16);
+}
+
+.expect-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.expect-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+}
+
+.expect-card h4 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-2);
+}
+
+.expect-card p {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-gray-600);
+}
+
+@media (max-width: 900px) {
+  .expect-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Available Courses Summary ── */
+.admissions-courses-summary {
+  padding-block: var(--space-16);
+}
+
+.courses-summary-table-wrapper {
+  overflow-x: auto;
+  margin-top: var(--space-8);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+}
+
+.courses-summary-table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.courses-summary-table th {
+  background-color: var(--color-gray-100);
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-gray-700);
+  border-bottom: 1px solid var(--color-gray-300);
+}
+
+.courses-summary-table td {
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--color-gray-700);
+  border-bottom: 1px solid var(--color-gray-200);
+  vertical-align: middle;
+}
+
+.courses-summary-table tr:last-child td {
+  border-bottom: none;
+}
+
+.courses-summary-table tr:hover td {
+  background-color: var(--color-gray-50);
+}
+
+/* ── Next Step Callout ── */
+.admissions-callout {
+  margin-top: var(--space-12);
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10) var(--space-8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+.admissions-callout-text h3 {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-2);
+}
+
+.admissions-callout-text p {
+  color: var(--color-gray-300);
+  font-size: var(--text-sm);
+  max-width: 600px;
+  line-height: var(--leading-relaxed);
+}

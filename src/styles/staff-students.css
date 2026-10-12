@@ -1,0 +1,134 @@
+/* ==========================================================================
+   ALIVE Institute — Staff Students Styles
+   ========================================================================== */
+
+.staff-students-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  font-family: var(--font-sans);
+}
+
+.students-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.students-header h1 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-gray-900);
+}
+
+.students-header p {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+}
+
+.filter-bar-students {
+  display: flex;
+  gap: var(--space-3);
+  background-color: var(--color-white);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  border: var(--border-thin);
+  box-shadow: var(--shadow-xs);
+  flex-wrap: wrap;
+}
+
+.student-search-input {
+  flex: 1;
+  min-width: 240px;
+  padding: 8px 12px;
+  font-size: var(--text-sm);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  outline: none;
+}
+
+.student-search-input:focus {
+  border-color: var(--color-primary);
+}
+
+.student-select-filter {
+  padding: 8px 12px;
+  font-size: var(--text-sm);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  background: white;
+  cursor: pointer;
+}
+
+.students-table-container {
+  background-color: var(--color-white);
+  border: var(--border-thin);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--text-sm);
+}
+
+.students-table th {
+  background-color: var(--color-gray-50);
+  padding: var(--space-4) var(--space-5);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-700);
+  border-bottom: var(--border-thin);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.students-table td {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: var(--border-thin);
+  color: var(--color-gray-800);
+  vertical-align: middle;
+}
+
+.students-table tr:hover td {
+  background-color: var(--color-gray-50);
+}
+
+.student-initials-bubble {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-primary-muted);
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+@media (max-width: 800px) {
+  .students-table thead {
+    display: none;
+  }
+  .students-table, .students-table tbody, .students-table tr, .students-table td {
+    display: block;
+    width: 100%;
+  }
+  .students-table tr {
+    border-bottom: 2px solid var(--color-gray-200);
+    padding: var(--space-4);
+  }
+  .students-table td {
+    padding: var(--space-2) 0;
+    border-bottom: none;
+  }
+}
