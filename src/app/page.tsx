@@ -8,13 +8,150 @@ import {
   ArrowRightIcon,
   InstagramIcon,
   YouTubeIcon,
+  ChevronDownIcon,
 } from '@/components/ui/SocialIcons';
 import '@/styles/home.css';
 
 export const metadata: Metadata = {
-  title: 'ALIVE Institute | Premier Coaching for Class 6–12 in Indore',
+  title: 'ALIVE Institute Indore | Premier Coaching for Class 6–12 (CBSE, ICSE, MP Board)',
   description:
-    'Dedicated coaching for CBSE, ICSE, and MP Board students from Class 6 to 12 in Indore. Campuses at Usha Nagar and Airport Road. Concept-first teaching and personalized mentorship.',
+    'Indore’s premier coaching institute for Class 6th to 12th students. Specialized batches for CBSE, ICSE, and MP Board across PCM, PCB, and Commerce with campuses in Usha Nagar and Airport Road. Admissions open.',
+  keywords: [
+    'coaching classes in Indore',
+    'best CBSE coaching Indore',
+    'ICSE coaching classes Indore',
+    'MP Board coaching Indore',
+    'Class 10 board coaching Indore',
+    'Class 12 PCM PCB coaching Indore',
+    'Commerce coaching Indore',
+    'CUET coaching Indore',
+    'coaching in Usha Nagar Indore',
+    'coaching near Airport Road Indore',
+    'ALIVE Institute Indore',
+  ],
+  alternates: {
+    canonical: 'https://aliveinstitute.in',
+  },
+  openGraph: {
+    title: 'ALIVE Institute Indore | Premier Coaching for Class 6–12',
+    description:
+      'Indore’s premier coaching institute for Class 6th to 12th students. Specialized batches for CBSE, ICSE, and MP Board across PCM, PCB, and Commerce.',
+    url: 'https://aliveinstitute.in',
+    siteName: 'ALIVE Institute Indore',
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ALIVE Institute Indore | Premier Coaching for Class 6–12',
+    description:
+      'Specialized batches for CBSE, ICSE, and MP Board with campuses at Usha Nagar and Airport Road, Indore.',
+  },
+};
+
+const faqs = [
+  {
+    question: 'Which classes and boards are coached at ALIVE Institute in Indore?',
+    answer:
+      'ALIVE Institute provides dedicated coaching for Class 6th to 12th students across CBSE, ICSE, and MP Board curricula. Our specialized programs encompass Middle School Foundation (Class 6–8), High School Board Prep (Class 9–10), and Senior Secondary streams (Class 11–12 PCM, PCB, and Commerce), alongside CUET competitive coaching.',
+  },
+  {
+    question: 'Where are ALIVE Institute campuses located in Indore?',
+    answer:
+      'We operate two accessible campuses in Indore: our Main Center is located at 380-B, Usha Nagar Extension (Behind Kidzee Pre-School), and our second branch is located at 13, Vyanktesh Nagar, Above LIC Office, Airport Road. Both branches feature well-lit modern classrooms, dedicated faculty spaces, and library facilities.',
+  },
+  {
+    question: 'What is the student-to-teacher ratio and batch size?',
+    answer:
+      'We adhere to a strict batch size limit of 20 to 25 students per batch. This allows our educators to provide personalized attention, observe each learner’s specific problem-solving techniques, and conduct 1:1 doubt-clearing sessions.',
+  },
+  {
+    question: 'How does ALIVE Institute assess and report student progress?',
+    answer:
+      'We implement a continuous assessment framework consisting of weekly topic quizzes, chapter-wise analytical evaluations, and full-length simulated board examinations. Detailed performance metrics and attendance analytics are shared regularly with parents.',
+  },
+  {
+    question: 'Can new students attend a trial class or diagnostic counseling session?',
+    answer:
+      'Yes, we offer complimentary diagnostic counseling and demo sessions. This allows prospective students to experience our concept-first teaching methodology and discuss their academic targets before formal admission.',
+  },
+  {
+    question: 'Does ALIVE Institute offer entrance exam coaching for CUET?',
+    answer:
+      'Yes, our senior secondary curriculum integrates specialized CUET preparation. We provide subject-wise question banks, speed-building test series, and negative-marking strategy drills alongside core board syllabus coverage.',
+  },
+];
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['EducationalOrganization', 'LocalBusiness'],
+  '@id': 'https://aliveinstitute.in/#organization',
+  name: 'ALIVE Institute',
+  legalName: 'ALIVE Institute Indore',
+  url: 'https://aliveinstitute.in',
+  logo: 'https://aliveinstitute.in/alive-logo.png',
+  image: 'https://aliveinstitute.in/og-image.jpg',
+  description:
+    'Indore’s premier coaching institute for Class 6th to 12th students across CBSE, ICSE, and MP Board. Specialized coaching in PCM, PCB, Commerce, and CUET.',
+  telephone: '+919302204651',
+  email: 'contact@aliveinstitute.in',
+  priceRange: '₹₹',
+  foundingDate: '2012',
+  sameAs: [
+    'https://www.instagram.com/aliveinstituteindore/',
+    'https://www.youtube.com/@aliveinstituteindore',
+  ],
+  address: [
+    {
+      '@type': 'PostalAddress',
+      streetAddress: '380-B, Usha Nagar Extension, Behind Kidzee Pre-School',
+      addressLocality: 'Indore',
+      addressRegion: 'Madhya Pradesh',
+      postalCode: '452009',
+      addressCountry: 'IN',
+    },
+    {
+      '@type': 'PostalAddress',
+      streetAddress: '13, Vyanktesh Nagar, Above LIC Office, Airport Road',
+      addressLocality: 'Indore',
+      addressRegion: 'Madhya Pradesh',
+      postalCode: '452005',
+      addressCountry: 'IN',
+    },
+  ],
+  geo: [
+    {
+      '@type': 'GeoCoordinates',
+      latitude: 22.7058,
+      longitude: 75.8398,
+    },
+    {
+      '@type': 'GeoCoordinates',
+      latitude: 22.738,
+      longitude: 75.8239,
+    },
+  ],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '09:00',
+      closes: '19:30',
+    },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
 };
 
 export default function HomePage() {
@@ -56,41 +193,49 @@ export default function HomePage() {
           <div className="hero-inner">
             <div className="hero-tag">
               <span className="hero-tag-dot" aria-hidden="true" />
-              <span>Admissions Open for Academic Session</span>
+              <span>⭐ Trusted Since 2012 • Admissions Open</span>
             </div>
 
             <h1 className="hero-title">
-              Where Learning Comes <em>Alive</em>
+              Indore’s Most <em>Trusted</em> Coaching for Classes 6 to 12
             </h1>
 
             <p className="hero-lead">
-              Premier academic coaching for Class 6th to 12th in Indore.
-              Empowering students across CBSE, ICSE, and MP Board curricula with
-              rigorous conceptual foundation and compassionate mentorship.
+              Since 2012, ALIVE Institute has helped 2,000+ students succeed in ICSE, CBSE &amp; MP Board
+              examinations through expert faculty, 1:1 mentorship, and board + CUET-focused preparation.
             </p>
 
             <div className="hero-actions">
               <Link href="/courses" className="btn btn-accent btn-lg">
-                Explore Courses
+                Explore Our Courses
               </Link>
-              <Link href="/contact" className="btn btn-outline btn-lg">
-                Contact Us
+              <Link href="/contact" className="btn btn-outline-hero btn-lg">
+                Contact Admissions
               </Link>
+              <a
+                href="https://wa.me/919752997597?text=Hello%20ALIVE%20Institute%2C%20I%20would%20like%20to%20enquire%20about%20admissions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp-hero btn-lg"
+                aria-label="Chat with ALIVE Institute on WhatsApp at +91 97529 97597"
+              >
+                <span>Chat on WhatsApp</span>
+              </a>
             </div>
 
-            {/* Stat bar below (Verifiable facts only) */}
+            {/* Stat bar below (Verifiable facts from institute) */}
             <div className="hero-stat-bar" role="region" aria-label="Key Institute Facts">
               <div className="stat-item">
-                <span className="stat-label">Grades Coached</span>
-                <span className="stat-value">6th–12th Grade</span>
+                <span className="stat-label">Students Mentored</span>
+                <span className="stat-value">2,000+ Students</span>
               </div>
               <div className="stat-item">
-                <span className="stat-label">Recognized Boards</span>
-                <span className="stat-value">CBSE · ICSE · MP Board</span>
+                <span className="stat-label">Academic Legacy</span>
+                <span className="stat-value">12+ Years (Est. 2012)</span>
               </div>
               <div className="stat-item">
-                <span className="stat-label">Campus Locations</span>
-                <span className="stat-value">Two Campuses in Indore</span>
+                <span className="stat-label">Indore Campuses</span>
+                <span className="stat-value">Usha Nagar &amp; Airport Rd</span>
               </div>
             </div>
           </div>
@@ -154,6 +299,21 @@ export default function HomePage() {
               <blockquote className="approach-quote">
                 &ldquo;Real academic confidence isn&rsquo;t memorizing formulas—it is understanding why those formulas exist and knowing how to apply them.&rdquo;
               </blockquote>
+
+              <div className="approach-classroom-card">
+                <img
+                  src="/images/alive-classroom-hero.jpg"
+                  alt="Dr. Aditi Agrawal teaching genetics with smart board at ALIVE Institute Indore"
+                  className="approach-classroom-img"
+                  width={640}
+                  height={427}
+                  loading="lazy"
+                />
+                <div className="approach-caption">
+                  <span className="caption-tag">Active Classroom</span>
+                  <span>Interactive smart board teaching &amp; small batch guidance at ALIVE Institute</span>
+                </div>
+              </div>
             </div>
 
             <div className="approach-pillars">
@@ -244,7 +404,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 5. CTA Section ── */}
+      {/* ── 5. Frequently Asked Questions (SEO FAQPage) ── */}
+      <section className="section home-faq" aria-labelledby="faq-heading">
+        <div className="container">
+          <div className="section-header text-center">
+            <p className="section-label">FREQUENTLY ASKED QUESTIONS</p>
+            <h2 id="faq-heading" className="heading-2">
+              Common Questions About ALIVE Institute
+            </h2>
+            <p className="section-lead">
+              Everything parents and students need to know about our batches, curriculum coverage, and admissions in Indore.
+            </p>
+          </div>
+
+          <div className="faq-grid" role="region" aria-label="Institute FAQs">
+            {faqs.map((faq, index) => (
+              <details key={index} className="faq-item" open={index === 0}>
+                <summary className="faq-question">
+                  <span>{faq.question}</span>
+                  <ChevronDownIcon size={20} className="faq-icon-chevron" aria-hidden="true" />
+                </summary>
+                <div className="faq-answer">
+                  <p>{faq.answer}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. CTA Section ── */}
       <section className="home-cta-banner" aria-labelledby="cta-heading">
         <div className="container">
           <div className="cta-banner-inner">
@@ -266,7 +455,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 6. Social Connect ── */}
+      {/* ── 7. Social Connect ── */}
       <section className="home-social" aria-labelledby="social-heading">
         <div className="container">
           <div className="social-inner">
@@ -304,6 +493,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Schema.org Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     </div>
   );
 }
+
