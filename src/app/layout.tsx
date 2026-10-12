@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   authors: [{ name: 'ALIVE Institute' }],
   creator: 'ALIVE Institute',
   publisher: 'ALIVE Institute',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_IN',
@@ -39,7 +42,7 @@ export const metadata: Metadata = {
       'Premier educational institute in Indore offering comprehensive foundation, secondary, senior secondary (Science & Commerce), and CUET coaching with proven academic results.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/opengraph-image',
         width: 1200,
         height: 630,
         alt: 'ALIVE Institute Indore Campus & Students',
@@ -51,11 +54,18 @@ export const metadata: Metadata = {
     title: 'ALIVE Institute Indore | Academic Excellence Since 2012',
     description:
       'Top coaching for Class 6-12th (CBSE, ICSE, MP Board) & CUET at Usha Nagar & Airport Road, Indore.',
-    images: ['/og-image.jpg'],
+    images: ['/opengraph-image'],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 

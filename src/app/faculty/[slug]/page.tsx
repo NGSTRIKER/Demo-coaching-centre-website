@@ -35,6 +35,9 @@ export async function generateMetadata({ params }: FacultyDetailPageProps): Prom
   return {
     title: `${faculty.name} | ALIVE Institute Indore`,
     description: `Faculty profile for ${faculty.name}, ${faculty.subject} at ALIVE Institute Indore.`,
+    alternates: {
+      canonical: `/faculty/${faculty.slug}`,
+    },
     openGraph: {
       title: `${faculty.name} | ALIVE Institute Indore`,
       description: faculty.bio,

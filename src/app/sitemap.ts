@@ -80,7 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Dynamic Faculty URLs
   const facultyRoutes: MetadataRoute.Sitemap = facultyDemoData.map((faculty) => ({
-    url: `${baseUrl}/faculty/${faculty.id}`,
+    url: `${baseUrl}/faculty/${faculty.slug}`,
     lastModified: currentDate,
     changeFrequency: 'monthly',
     priority: 0.75

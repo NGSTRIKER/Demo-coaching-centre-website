@@ -35,6 +35,9 @@ export async function generateMetadata({ params }: CoursePageProps): Promise<Met
   return {
     title: `${course.title} — ${course.classes} | ALIVE Institute Indore`,
     description: course.shortDescription,
+    alternates: {
+      canonical: `/courses/${course.slug}`,
+    },
     openGraph: {
       title: `${course.title} | ALIVE Institute Indore`,
       description: course.shortDescription,
