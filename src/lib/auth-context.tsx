@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { getCookie, setCookie, deleteCookie, COOKIE_KEYS } from "./cookies";
 
 export type UserRole = "student" | "staff" | "admin" | null;
 
@@ -57,15 +58,24 @@ const AuthContext = createContext<AuthContextType>({
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<MockUser | null>(defaultStudent);
 
-  // Initialize from localStorage if present
+  // Initialize from Cookie / localStorage for instant session restoration
   useEffect(() => {
     try {
+      const cookieVal = getCookie(COOKIE_KEYS.AUTH_USER);
+      if (cookieVal) {
+        setUser(JSON.parse(cookieVal));
+        return;
+      }
+
       const saved = localStorage.getItem("alive_mock_user");
       if (saved) {
-        setUser(JSON.parse(saved));
+        const parsed = JSON.parse(saved);
+        setUser(parsed);
+        setCookie(COOKIE_KEYS.AUTH_USER, JSON.stringify(parsed), 30);
       } else {
         // default to student for instant demo feel
         setUser(defaultStudent);
+        setCookie(COOKIE_KEYS.AUTH_USER, JSON.stringify(defaultStudent), 30);
       }
     } catch {
       // fallback
@@ -86,7 +96,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     setUser(selectedUser);
     try {
-      localStorage.setItem("alive_mock_user", JSON.stringify(selectedUser));
+      const jsonStr = JSON.stringify(selectedUser);
+      setCookie(COOKIE_KEYS.AUTH_USER, jsonStr, 30);
+      localStorage.setItem("alive_mock_user", jsonStr);
     } catch {
       // ignore storage failure
     }
@@ -95,6 +107,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const logout = () => {
     setUser(null);
     try {
+      deleteCookie(COOKIE_KEYS.AUTH_USER);
       localStorage.removeItem("alive_mock_user");
     } catch {
       // ignore

@@ -129,7 +129,7 @@
 
 .btn-start-exam {
   background-color: var(--color-accent);
-  color: var(--color-white);
+  color: var(--color-white-pure);
   padding: var(--space-3) var(--space-8);
   border-radius: var(--radius-md);
   font-size: var(--text-base);
@@ -225,7 +225,7 @@
 
 .btn-submit-exam {
   background-color: var(--color-success);
-  color: var(--color-white);
+  color: var(--color-white-pure);
   padding: var(--space-2) var(--space-5);
   border-radius: var(--radius-md);
   font-size: var(--text-sm);
@@ -320,14 +320,14 @@
 
 .palette-btn.answered {
   background-color: var(--color-success);
-  color: var(--color-white);
+  color: var(--color-white-pure);
   border-color: var(--color-success);
 }
 
 .palette-btn.marked {
-  background-color: #f59e0b;
-  color: var(--color-white);
-  border-color: #d97706;
+  background-color: #d97706;
+  color: var(--color-white-pure);
+  border-color: #b45309;
 }
 
 .palette-btn.unvisited {
