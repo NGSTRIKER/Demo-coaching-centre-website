@@ -44,9 +44,9 @@ export const Logo: React.FC<LogoProps> = ({
   showTagline = false,
 }) => {
   const isLight = variant === 'light';
-  const primaryColor = isLight ? '#ffffff' : '#1a3a5c';
+  const primaryColor = isLight ? '#ffffff' : 'var(--text-primary)';
   const accentColor = '#c4532a';
-  const subtextColor = isLight ? 'rgba(255, 255, 255, 0.75)' : '#6c757d';
+  const subtextColor = isLight ? 'rgba(255, 255, 255, 0.75)' : 'var(--text-muted)';
   const flameGradientId = `alive-flame-${variant}-${size}`;
 
   const cfg = sizeConfig[size];

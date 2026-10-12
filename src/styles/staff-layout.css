@@ -5,16 +5,17 @@
 .staff-app-layout {
   display: flex;
   min-height: 100vh;
-  background-color: var(--color-gray-50);
+  background-color: var(--bg-app);
   font-family: var(--font-sans);
-  color: var(--color-gray-900);
+  color: var(--text-primary);
+  transition: background-color var(--transition-base), color var(--transition-base);
 }
 
 /* Sidebar */
 .staff-sidebar {
   width: 260px;
   background-color: #0b1a2d; /* Distinct deep midnight slate for faculty console */
-  color: var(--color-white);
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -144,8 +145,8 @@
 
 .staff-topbar {
   height: 60px;
-  background-color: var(--color-white);
-  border-bottom: var(--border-thin);
+  background-color: var(--bg-surface-elevated);
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -153,12 +154,13 @@
   position: sticky;
   top: 0;
   z-index: var(--z-sticky);
+  transition: background-color var(--transition-base), border-color var(--transition-base);
 }
 
 .staff-topbar-title {
   font-size: var(--text-md);
   font-weight: var(--font-semibold);
-  color: var(--color-gray-800);
+  color: var(--text-primary);
 }
 
 .staff-page-viewport {

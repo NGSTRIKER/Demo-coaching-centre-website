@@ -634,3 +634,27 @@
     align-items: flex-start;
   }
 }
+
+/* ── Dark Mode Overrides for Homepage ── */
+[data-theme="dark"] .home-hero {
+  background: linear-gradient(180deg, rgba(74, 144, 226, 0.14) 0%, var(--bg-surface) 60%, var(--bg-app) 100%);
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .hero-title {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .home-hero::before {
+  background: linear-gradient(90deg, transparent, rgba(74, 144, 226, 0.3), transparent);
+}
+
+[data-theme="dark"] .teaching-section {
+  background-color: var(--bg-surface);
+}
+
+[data-theme="dark"] .social-connect-section {
+  background-color: var(--bg-surface);
+  border-top-color: var(--border-color);
+}
+

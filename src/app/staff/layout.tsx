@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 import "@/styles/staff-layout.css";
 
 const staffNavItems = [
@@ -93,10 +94,11 @@ function StaffLayoutContent({
       <div className="staff-main-content">
         <header className="staff-topbar">
           <div className="staff-topbar-title">Faculty Management Portal</div>
-          <div style={{ display: "flex", gap: "var(--space-4)", alignItems: "center" }}>
+          <div style={{ display: "flex", gap: "var(--space-3)", alignItems: "center" }}>
             <span style={{ fontSize: "var(--text-xs)", background: "var(--color-primary-muted)", color: "var(--color-primary)", padding: "4px 10px", borderRadius: "var(--radius-full)", fontWeight: 600 }}>
               Term 2 Live Academic Session
             </span>
+            <ThemeToggle />
             <Link href="/login" style={{ fontSize: "var(--text-xs)", color: "var(--color-primary)", textDecoration: "underline", fontWeight: 600 }}>
               Switch Account
             </Link>

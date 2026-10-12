@@ -32,10 +32,12 @@ body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
   line-height: var(--leading-normal);
-  color: var(--color-gray-900);
-  background-color: var(--color-white);
+  color: var(--text-primary);
+  background-color: var(--bg-app);
   min-height: 100dvh;
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  transition: background-color var(--transition-base), color var(--transition-base);
 }
 
 img,
@@ -151,7 +153,7 @@ table {
   font-weight: var(--font-bold);
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
-  color: var(--color-primary-dark);
+  color: var(--text-primary);
 }
 
 .heading-2 {
@@ -160,7 +162,7 @@ table {
   font-weight: var(--font-bold);
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
-  color: var(--color-primary-dark);
+  color: var(--text-primary);
 }
 
 .heading-3 {
@@ -168,7 +170,8 @@ table {
   font-size: var(--text-xl);
   font-weight: var(--font-semibold);
   line-height: var(--leading-snug);
-  color: var(--color-gray-900);
+  letter-spacing: var(--tracking-snug);
+  color: var(--text-primary);
 }
 
 .heading-4 {
@@ -176,13 +179,14 @@ table {
   font-size: var(--text-lg);
   font-weight: var(--font-semibold);
   line-height: var(--leading-snug);
-  color: var(--color-gray-900);
+  letter-spacing: var(--tracking-snug);
+  color: var(--text-primary);
 }
 
 .body-large {
   font-size: var(--text-md);
   line-height: var(--leading-relaxed);
-  color: var(--color-gray-700);
+  color: var(--text-secondary);
 }
 
 .body-text {

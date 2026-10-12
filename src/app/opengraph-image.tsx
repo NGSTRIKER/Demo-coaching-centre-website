@@ -165,9 +165,9 @@ export default function OpenGraphImage() {
               fontWeight: '500'
             }}
           >
-            <span>✓ Small Batch Mentorship</span>
-            <span>✓ Free Study Resources</span>
-            <span>✓ 14+ Years of Trust</span>
+            <span>• Small Batch Mentorship</span>
+            <span>• Free Study Resources</span>
+            <span>• 14+ Years of Trust</span>
           </div>
 
           <div

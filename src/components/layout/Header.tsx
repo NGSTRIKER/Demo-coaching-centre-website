@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Logo from '@/components/ui/Logo';
+import ThemeToggle from '@/components/ui/ThemeToggle';
 import { navItems, instituteInfo } from '@/lib/data';
 import { PhoneIcon, MailIcon } from '@/components/ui/SocialIcons';
 import '@/styles/header.css';
@@ -172,6 +173,7 @@ export const Header: React.FC = () => {
 
             {/* Header Actions */}
             <div className="header-actions">
+              <ThemeToggle />
               <Link
                 href="/login"
                 className="btn-header-login"
@@ -288,6 +290,10 @@ export const Header: React.FC = () => {
           </nav>
 
           <div className="mobile-nav-footer">
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingBottom: "12px", borderBottom: "1px solid var(--border-color)", marginBottom: "12px" }}>
+              <span style={{ fontSize: "var(--text-sm)", fontWeight: 600 }}>Theme</span>
+              <ThemeToggle variant="pill" />
+            </div>
             <Link
               href="/login"
               className="btn btn-outline"

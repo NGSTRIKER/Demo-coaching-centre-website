@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 import "@/styles/student-layout.css";
 
 const navItems = [
@@ -94,6 +95,7 @@ function StudentLayoutContent({
 
           <div className="topbar-actions">
             <span className="topbar-pill-tag">Academic Year 2026-27</span>
+            <ThemeToggle />
             <Link
               href="/login"
               style={{

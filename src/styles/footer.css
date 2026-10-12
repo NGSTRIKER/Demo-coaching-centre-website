@@ -26,7 +26,7 @@
   font-family: var(--font-sans);
   font-size: var(--text-base);
   font-weight: var(--font-semibold);
-  color: var(--color-white);
+  color: #ffffff;
   letter-spacing: var(--tracking-wide);
   margin-bottom: var(--space-5);
   position: relative;
@@ -249,3 +249,9 @@
     align-items: flex-start;
   }
 }
+
+[data-theme="dark"] .site-footer {
+  background-color: #060b14;
+  border-top: 1px solid var(--border-color);
+}
+

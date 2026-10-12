@@ -1,23 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
 import { Suspense } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { AuthProvider } from '@/lib/auth-context';
+import { ThemeProvider } from '@/lib/theme-context';
 import { instituteInfo, branches } from '@/lib/data';
 import '../styles/globals.css';
-
-const inter = Inter({
-  variable: '--font-sans',
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const playfair = Playfair_Display({
-  variable: '--font-serif',
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aliveinstitute.in'),
@@ -100,8 +88,19 @@ const educationalOrgJsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('alive_theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -113,17 +112,19 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         <a href="#main-content" className="skip-to-content">
           Skip to main content
         </a>
-        <AuthProvider>
-          <Suspense fallback={null}>
-            <Header />
-          </Suspense>
-          <main id="main-content" tabIndex={-1}>
-            {children}
-          </main>
-          <Suspense fallback={null}>
-            <Footer />
-          </Suspense>
-        </AuthProvider>
+        <ThemeProvider>
+          <AuthProvider>
+            <Suspense fallback={null}>
+              <Header />
+            </Suspense>
+            <main id="main-content" tabIndex={-1}>
+              {children}
+            </main>
+            <Suspense fallback={null}>
+              <Footer />
+            </Suspense>
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
